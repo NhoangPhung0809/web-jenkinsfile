@@ -1,10 +1,9 @@
 pipeline {
-    agent any
+    agent {docker {images 'ubuntu'}}
     stages {
-      stages('clone code') {
+      stages('Build') {
           steps{
-            git 'https://github.com/NhoangPhung0809/web-jenkinsfile.git'
-
+              sh 'docker images'
           }
         }
     }
