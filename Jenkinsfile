@@ -1,7 +1,7 @@
 pipeline {
-    agent {docker {images 'ubuntu'}}
+    agent {docker {image 'ubuntu'} }
     stages {
-      stages('Build') {
+      stage('Build') {
           steps{
               sh 'docker images'
           }
